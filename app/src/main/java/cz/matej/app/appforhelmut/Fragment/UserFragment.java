@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
+import cz.matej.app.appforhelmut.Api.RequestFactory;
 import cz.matej.app.appforhelmut.R;
 import cz.matej.app.appforhelmut.adapter.UserAdapter;
 import cz.matej.app.appforhelmut.databinding.UserFragmentBinding;
@@ -61,6 +62,14 @@ public class UserFragment extends Fragment implements ReListener<List<Example>> 
 
         return this.mRootView;
     }
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        parseWeather();
+
+    }
+
 
 
     private void init(UserFragmentBinding binding)
@@ -69,6 +78,13 @@ public class UserFragment extends Fragment implements ReListener<List<Example>> 
         this.recyclerView = binding.recyclerView;
     }
 
+
+    private void parseWeather() {
+        if (getArguments() != null)
+        {
+            RequestFactory.getsInstance().GetCurrentUser();
+        }
+    }
 
     @NonNull
     private LinearLayoutManager getLayoutManager()

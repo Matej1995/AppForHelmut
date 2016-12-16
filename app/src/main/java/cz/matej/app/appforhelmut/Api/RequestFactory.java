@@ -55,14 +55,12 @@ public class RequestFactory implements ApiConfig {
 
     public void GetCurrentUser()
     {
-        final Example example = new Example();
         final Call<List<Example>> call =
                 openUserApi.repoContributors();
         call.enqueue(new Callback<List<Example>>() {
             @Override
             public void onResponse(Call<List<Example>> call, Response<List<Example>> response) {
-               List<Example> listUsers = response.body();
-
+                List<Example> listUsers = response.body();
                 Log.d(TAG, "Number of user received: " + listUsers.size());
 
             }
