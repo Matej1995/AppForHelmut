@@ -61,9 +61,4 @@ public class UserAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
 
 
-    public void setFileModel(List<Example> userModel)
-    {
-        this.userModel = userModel;
-    }
-
 }

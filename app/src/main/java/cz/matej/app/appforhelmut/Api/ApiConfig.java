@@ -1,4 +1,4 @@
-package cz.matej.app.appforhelmut.Api;
+package cz.matej.app.appforhelmut.api;
 
 /**
  * Created by Fanda on 30.10.2016.

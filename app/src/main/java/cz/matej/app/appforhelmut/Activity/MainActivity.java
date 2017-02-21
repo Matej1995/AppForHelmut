@@ -1,4 +1,4 @@
-package cz.matej.app.appforhelmut.Activity;
+package cz.matej.app.appforhelmut.activity;
 
 import android.databinding.DataBindingUtil;
 
@@ -6,9 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 
-import cz.matej.app.appforhelmut.Fragment.UserFragment;
 import cz.matej.app.appforhelmut.R;
 import cz.matej.app.appforhelmut.databinding.ActivityMainBinding;
+import cz.matej.app.appforhelmut.fragment.UserFragment;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportFragmentManager()
                 .beginTransaction()
-                 // .replace(R.id.userFragment, UserFragment.newInstance())
+                .replace(R.id.userFragment, UserFragment.newInstance())
                 .commit();
 
     }
